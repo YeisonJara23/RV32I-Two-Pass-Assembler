@@ -61,9 +61,9 @@ El ensamblador requiere Python 3.6 o superior y no tiene dependencias externas, 
 
 El uso fundamental del ensamblador implica ejecutar el script de Python desde la línea de comandos, especificando el archivo de código fuente y los archivos de salida deseados. El sistema procesa el código y genera los archivos solicitados, proporcionando retroalimentación sobre el éxito o los errores encontrados.
 
-### Ejemplos de Comandos de Uso
 
-**Comando básico para ensamblar un programa:**
+
+### Ejemplos de Comandos de Uso
 
 **Comando básico para ensamblar un programa:**
 
@@ -110,6 +110,8 @@ El proyecto incluye varios programas de ejemplo que demuestran diferentes aspect
 ### Desarrollo de Programas
 
 Para desarrollar programas usando este ensamblador, se recomienda comenzar con los ejemplos proporcionados y modificarlos gradualmente. Los usuarios pueden escribir su código en cualquier editor de texto y guardarlo con extensión .asm.
+
+
 
 ### Proceso de Ensamblado
 
@@ -166,5 +168,15 @@ El ensamblador se adhiere estrechamente a la especificación RV32I base, asegura
 
 El Ensamblador RV32I representa una herramienta valiosa para cualquiera interesado en la programación de bajo nivel y la arquitectura RISC-V. Su combinación de funcionalidades robustas, diseño educativo y facilidad de uso lo hacen adecuado tanto para principiantes como para usuarios experimentados que buscan una herramienta de prototipado rápida y confiable. Los diversos comandos y opciones disponibles permiten adaptar el proceso de ensamblado a diferentes necesidades, desde desarrollo rápido hasta depuración detallada y documentación técnica.
 
-
+```mermaid
+graph LR
+    A[Código Fuente .asm] --> B[Pasada 1]
+    B --> C[Tabla de Símbolos]
+    C --> D[Pasada 2]
+    D --> E[Expansión Pseudoinstrucciones]
+    E --> F[Codificación]
+    F --> G[Archivos de Salida]
+    G --> H[.hex]
+    G --> I[.bin]
+    G --> J[.lst]
 
